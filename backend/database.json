@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Leonardo Sartori",
+      "email": "leonardosartori22@hotmail.com",
+      "age": "24"
+    }
+  ]
+}
