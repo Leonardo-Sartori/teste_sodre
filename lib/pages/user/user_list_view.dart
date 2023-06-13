@@ -122,6 +122,6 @@ class _UserListViewState extends State<UserListView> {
     push(
       context,
       const UserFormPage(),
-      replace: false);
+      replace: true);
   }
 }

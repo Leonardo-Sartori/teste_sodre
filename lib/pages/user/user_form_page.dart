@@ -29,15 +29,9 @@ class UserFormPageState extends State<UserFormPage> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => _userBloc,
-      child: WillPopScope(
-        onWillPop: () async {
-          _goToListView();
-          return true;
-        },
-        child: Scaffold(
-          appBar: _appBar(),
-          body: _body(),
-        ),
+      child: Scaffold(
+        appBar: _appBar(),
+        body: _body(),
       ),
     );
   }
@@ -47,6 +41,7 @@ class UserFormPageState extends State<UserFormPage> {
       preferredSize: Size(MediaQuery.of(context).size.width, 50),
       child: AppBar(
         title: const Text("Novo Cliente"),
+        leading: IconButton(onPressed: () => _goToListView(), icon: const Icon(Icons.arrow_back, size: 30,)),
         actions: [
           IconButton(
               onPressed: () => _save(),
